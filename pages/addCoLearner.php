@@ -18,6 +18,53 @@ require 'config.php';
     <meta name="description" content="">
     <meta name="author" content="">
     
+    <link type="text/css" rel ="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="jquery/jquery-ui.css" />
+    <link type="text/css" rel ="stylesheet" href="css/style.css">
+    <script src="jquery/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.maskedinput.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+
+    <script>
+ 
+        function fnRequired(obj,strSpanName){
+            if(obj.value.trim() == ""){
+                document.getElementById(strSpanName).innerHTML="This is invalid ".concat(strSpanName);
+            } else {
+                document.getElementById(strSpanName).innerHTML="";
+            }
+        }
+
+        function fnValidEmail(obj,strSpanName){  
+                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(obj.value) || obj.value.trim() == ""){  
+                    document.getElementById(strSpanName).innerHTML="This is invalid email."; 
+                }else{
+                    document.getElementById(strSpanName).innerHTML="";
+                }  
+        }
+
+        function fnValidBirthdate(strBirthdateValue, strBirthdate){
+            var datCurrent = new Date();
+            var datDay = datCurrent.getDate();
+            var datMonth = datCurrent.getMonth() + 1;
+            var datYear = datCurrent.getFullYear();
+            if(datDay<10){
+                datDay = '0' + datDay;
+            }
+            if(datMonth < 10){
+                datMonth = '0' + datMonth;
+            }
+            datCurrent = datMonth+'/'+datDay+'/'+datYear;
+
+            if(strBirthdateValue > datCurrent || strBirthdateValue == ""){
+                document.getElementById(strBirthdate).innerHTML="Invalid Birthdate";
+            } else{
+                document.getElementById(strBirthdate).innerHTML="";
+            }
+        }
+    </script>
     <title>Learners</title>
     <!-- Custom Css -->
     <link href="../customcss/style.css" rel="stylesheet">
@@ -79,26 +126,30 @@ require 'config.php';
                                     <div class="col-sm-8">
                                         <div class="form-group required">   
                                             <label class="control-label" for="learnerid">Co-Learner ID</label>
-                                            <input required="required" value="" name = "learnerid" class = "form-control" type="text" placeholder="Learner ID">        
+                                            <input required="required" value="" name = "learnerid" class = "form-control" type="text" placeholder="Learner ID" onblur= fnRequired(this,"learnerid")>
+                                            <span style="color:red;" id="learnerid"></span>       
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group required">
                                             <label class="control-label">Full name</label>
-                                            <input name = "lastname" class = "form-control" type="text" placeholder="Last">
+                                            <input name = "lastname" class = "form-control" type="text" placeholder="Last" onblur= fnRequired(this,"lastname")>
+                                            <span style="color:red;" id="lastname"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>&nbsp</label>    
-                                            <input name = "firstname" class = "form-control" type="text" placeholder="First">
+                                            <input name = "firstname" class = "form-control" type="text" placeholder="First" onblur= fnRequired(this,"firstname")>
+                                            <span style="color:red;" id="firstname"></span>                                       
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <label>Email</label>    
-                                            <input name = "firstname" class = "form-control" type="text" placeholder="First">
+                                            <input name = "firstname" class = "form-control" type="text" placeholder="Email" onblur= fnValidEmail(this,"email")>
+                                            <span style="color:red;" id="email"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-8">  
