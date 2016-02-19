@@ -34,10 +34,10 @@
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                    <tr>
+                    <tr style='font-size: 12px;'>
                     	<th></th>
                         <?php
-                        for($intCounter = 1; $intCounter <= 15; $intCounter++){
+                        for($intCounter = 1; $intCounter <= 31; $intCounter++){
                         	echo "<th>$intCounter</th>";
                         }
                         ?>
@@ -46,9 +46,9 @@
                 <tbody>
                     	<?php
                         for($intRow = 1; $intRow <= 12; $intRow++){
-                        	echo "<tr><td>January</td>";
-                        	for($intCol = 1; $intCol <=15; $intCol++){
-                        		echo "<td><input type='checkbox' value=''></td>";
+                        	echo "<tr style='font-size: 12px;'><td>January</td>";
+                        	for($intCol = 1; $intCol <=31; $intCol++){
+                        		echo "<td><label><input type='checkbox' value=''></label></td>";
                         	}
                         }
                         ?> 

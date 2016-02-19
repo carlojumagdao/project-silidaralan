@@ -1,6 +1,4 @@
 <?php
-
-
 require 'navigation.php';
 require 'banner.php';
 require "connection.php";
@@ -59,7 +57,6 @@ $data = $results -> fetchAll();
 <body>
 
     <div id="wrapper">
-        <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">

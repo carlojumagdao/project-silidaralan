@@ -56,54 +56,43 @@ $data = $results -> fetchAll();
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Program</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                <!-- /.row -->
-                <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a href="addprogram.php" class="btn btn-primary">Create</a>
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="dataTable_wrapper">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>Program ID</th>
-                                            <th>Program Name</th>
-                                            <th> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                       <?php foreach ($data as $datum) { ?>
-                                        <tr>
-                                            <td class = "code"><?php echo $datum['strProgCode']?></td>
-                                            <td><?php echo $datum['strProgDesc']?></td>
-                                            <td>
-                                              <button type="button" class="btn btn-primary btn-circle view" onclick="rowFunction()" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye"></i></button>
-                                              <button type="button" class="btn btn-warning btn-circle edit" onclick="rowFunction()" data-toggle="tooltip" data-placement="top" title="Edit"><i class="glyphicon glyphicon-edit"></i></button>
-                                              <button type="button" class="btn btn-danger btn-circle delete" onclick="rowFunction()" data-toggle="tooltip" data-placement="top" title="Delete"><i class="glyphicon glyphicon-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                    </tbody>
-                                </table>
+                        <h1 class="page-header">Program <a style="margin-bottom:1%" href="addprogram.php" class="btn btn-primary">Create</a></h1>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                List of programs
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="dataTable_wrapper">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>Program ID</th>
+                                                <th>Program Name</th>
+                                                <th> </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           <?php foreach ($data as $datum) { ?>
+                                            <tr>
+                                                <td class = "code"><?php echo $datum['strProgCode']?></td>
+                                                <td><?php echo $datum['strProgDesc']?></td>
+                                                <td>
+                                                  <button type="button" class="btn btn-primary btn-circle view" onclick="rowFunction()" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye"></i></button>
+                                                  <button type="button" class="btn btn-warning btn-circle edit" onclick="rowFunction()" data-toggle="tooltip" data-placement="top" title="Edit"><i class="glyphicon glyphicon-edit"></i></button>
+                                                  <button type="button" class="btn btn-danger btn-circle delete" onclick="rowFunction()" data-toggle="tooltip" data-placement="top" title="Delete"><i class="glyphicon glyphicon-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-            </div>
-            <!-- /.container-fluid -->
         </div>
-        <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
 

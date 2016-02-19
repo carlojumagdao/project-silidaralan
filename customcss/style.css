@@ -80,9 +80,6 @@ html, body{
 .sidebar .nav li{
 	border-bottom:1px solid transparent;
 }
-.sidebar .nav a:visited {
-	background-color: #f5c012;
-}
 .sidebar .nav a:hover {
 	background-color: #000000;
 	color: #f5c012;
@@ -92,8 +89,8 @@ html, body{
 	color: #000000;
 	background: #f5c012 url("../Images/active-yellow.jpg") left center no-repeat;
 }
-
 /* Round user picture */
 .roundrect {
 border-radius: 64px;
 }
+

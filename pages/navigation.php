@@ -22,7 +22,7 @@
                     <ul class="nav" id="side-menu">
                     <div style="margin-top:10%;margin-bottom:10%;">
                         <center>
-                            <img class="roundrect" src="../Images/carlo.jpg" width="130">
+                            <img class="roundrect" src="../Images/avatar.jpg" width="130">
                             <h6>Logged in as:</h6>
                             <h4 style="color:#ffffff;">Jumagdao, Carlo</h4>
                         </center>
