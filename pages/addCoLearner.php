@@ -104,14 +104,12 @@ require 'config.php';
                                         <div class="form-group required" id = "lname-div">
                                             <label class="control-label">Full name</label>
                                             <input name = "lastname" class = "form-control" type="text" placeholder="Last" onblur= fnRequired(this,"lname-div","lastname")>
-                                            <span style="color:red;" id="lastname"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group" id = "fname-div">
                                             <label>&nbsp</label>    
                                             <input name = "firstname" class = "form-control" type="text" placeholder="First" onblur= fnRequired(this,"fname-div","firstname")>
-                                            <span style="color:red;" id="firstname"></span>                                       
                                         </div>
                                     </div>
                                     
@@ -119,7 +117,6 @@ require 'config.php';
                                         <div class="form-group" id = "email-div">
                                             <label>Email</label>    
                                             <input name = "firstname" class = "form-control" type="text" placeholder="Email" onblur= fnValidEmail(this,"email-div","email")>
-                                            <span style="color:red;" id="email"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-8">  
@@ -148,15 +145,13 @@ require 'config.php';
                                     <div class="col-sm-4">
                                         <div class="form-group" id = "day-div">
                                             <label class= "control-label" for="contact">&nbsp</label>
-                                            <input name = "day" class = "form-control" type="number" placeholder="Day" onblur= fnRequired(this,"day-div","day")
-                                            ><span style="color:red;" id="day"></span>
+                                            <input name = "day" class = "form-control" type="number" placeholder="Day" onblur= fnRequired(this,"day-div","day")>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group" id = "year-div">
                                             <label class= "control-label" for="contact">&nbsp</label>
-                                            <input name = "year" class = "form-control" type="number" placeholder="Year" onblur= fnRequired(this,"year-div","year")
-                                            ><span style="color:red;" id="year"></span>
+                                            <input name = "year" class = "form-control" type="number" placeholder="Year" onblur= fnRequired(this,"year-div","year")>
                                         </div>
                                     </div>
                                     

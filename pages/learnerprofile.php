@@ -28,7 +28,27 @@ $schedData = $schedResult -> fetchAll();
     }
     </script>
 
+    <script>
+            function fnRequired(obj,strdiv,strSpanName){
+                if((obj.value.trim() == "") || (obj.value <= 0)){
+                    document.getElementById(strdiv).className="form-group has-error";
+                } else{
+                    document.getElementById(strdiv).className="form-group has-success";
+                }
+            }
+
+            function fnValidEmail(obj,strdiv,strSpanName){  
+                    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(obj.value) || obj.value.trim() == ""){  
+                        document.getElementById(strdiv).className="has-error";
+                    }else{
+                        document.getElementById(strdiv).className="has-success";
+                    }  
+            }
+    </script>
+
 </head>
+
+
 <body>
 
    <div class="col-lg-10" id="custom-form">
@@ -41,21 +61,21 @@ $schedData = $schedResult -> fetchAll();
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="form-group required">   
+            <div class="form-group required" id = "learnerId-div">   
                 <label class="control-label" for="learnerid">Learner ID</label>
-                <input id = "learnerid-id" required="required" name = "learnerid" class = "form-control" type="text" placeholder="Learner ID">        
+                <input id = "learnerid-id" required="required" name = "learnerid" class = "form-control" type="text" placeholder="Learner ID" onblur = fnRequired(this,"learnerId-div","leanerId")>        
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="form-group required">
+            <div class="form-group required" id = "lname-div">
                 <label class="control-label">Full name</label>
-                <input id = "lname-id" name = "lastname" class = "form-control" type="text" placeholder="Last">
+                <input id = "lname-id" name = "lastname" class = "form-control" type="text" placeholder="Last" onblur = fnRequired(this,"lname-div","lastname")>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="form-group">
+            <div class="form-group" id = "fname-div">
                 <label>&nbsp</label>    
-                <input id = "fname-id" name = "firstname" class = "form-control" type="text" placeholder="First">
+                <input id = "fname-id" name = "firstname" class = "form-control" type="text" placeholder="First" onblur = fnRequired(this,"fname-div","firstname")>
             </div>
         </div>
         <div class="col-sm-4">
@@ -122,18 +142,18 @@ $schedData = $schedResult -> fetchAll();
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="form-group">
+            <div class="form-group" id = "day-div">
                 <label class= "control-label" for="contact">&nbsp</label>
-                <input id = "bdate-day-id" name = "day" class = "form-control" type="text" placeholder="Day">
+                <input id = "bdate-day-id" name = "day" class = "form-control" type="number" placeholder="Day" onblur = fnRequired(this,"day-div","day")>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="form-group">
+            <div class="form-group" id = "year-div">
                 <label class= "control-label" for="contact">&nbsp</label>
-                <input id = "bdate-year-id" name = "year" class = "form-control" type="text" placeholder="Year">
+                <input id = "bdate-year-id" name = "year" class = "form-control" type="number" placeholder="Year" onblur = fnRequired(this,"year-div","year")>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" >
             <div class="form-group">
                 <label for="address">Address</label>
                 <textarea id = "address-id" rows = 4 name = "address" class = "form-control"></textarea>
