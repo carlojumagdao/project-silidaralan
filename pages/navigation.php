@@ -10,7 +10,6 @@
     <meta name="author" content="">
 
     <title>Silid Aralan, Inc</title>
-
     <link href="../customcss/style.css" rel="stylesheet">
 </head>
 

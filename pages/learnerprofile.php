@@ -18,7 +18,7 @@ $schedData = $schedResult -> fetchAll();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Learner Profile</title>
+    <title>Learner Profile</title>
 
     <script>
     function fnUploadImage(){

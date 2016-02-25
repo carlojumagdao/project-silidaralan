@@ -113,9 +113,9 @@
 </head>
 <body>
 	<div id="loginBody">
-		<img style="margin:1% 0% 0% 1%;"src="../loginfiles/uploads/Sai-logo gray copy.png" width="100" height="43">
+		
 		<center>
-			<img src="../loginfiles/uploads/Door White.png" width="92" height="112">
+			<img style="margin-top: 4%;"src="../loginfiles/uploads/Door White.png" width="92" height="112">
 			<h1>Sign in to Silid Aralan</h1>
 			<form id = "form-wrapper" method="POST" action="index.php">
 				<input style="border-top-right-radius: 0.5em;border-top-left-radius: 0.5em;" type="text" placeholder="Silid Aralan ID"/>
@@ -152,8 +152,8 @@
 	    			<input name = "tbFirstname" style = "width:42.5%;" type = "text" placeholder="first name"/>
 	    			<input name = "tbLastname" style = "width:42.5%;" type = "text" placeholder="last name"/>
 	    			<input name = "tbBirthdate" type = "text" id = "date" placeholder="birthday (mm/dd/yyy)" onfocus="fnFocusMessageShort(this)" onblur="fnValidBirthday(this);" title="Enter a valid birthdate"/>
-	    			<input name = "tbPassword" id = "myPassword" type = "password" placeholder="password" onblur="fnPassword(this)" />
-	    			<input type = "password" placeholder="confirm password" onblur="fnPasswordCheck(this,'password-span')"/> <span style = "font-size:12px;color:red;" id = "password-span"></span>
+	    			<input name = "tbPassword" type = "password" placeholder="password" onblur="fnPassword(this)" />
+	    			<input type = "password" placeholder="confirm password" onblur="fnPasswordCheck(this,'password-span')"/> 
 	    			<input name = "tbCompany" type = "text" placeholder="company" />
 	    			<input style = "padding-left:1px;font-size:15px;font-weight:600;color:#ffffff;cursor: pointer;background-color:rgb(245, 193, 2);margin-top:3%;margin-left:30%;width:32.5%;" type = "submit" value="Submit" name="btnRegister" />
 	    		</form>

@@ -67,6 +67,7 @@ html, body{
 }
 
 /* Custom Navigation Sidebar*/
+
 #side-menu{
 	background-color: #23272d;
 	color:  #808b9c;
@@ -89,6 +90,7 @@ html, body{
 	color: #000000;
 	background: #f5c012 url("../Images/active-yellow.jpg") left center no-repeat;
 }
+
 /* Round user picture */
 .roundrect {
 border-radius: 64px;

@@ -55,11 +55,9 @@ require 'banner.php';
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">New Program</h1>
-                    </div>
-                    <div class="col-lg-12">
-                        <a href="addLearner.php" class="btn btn-primary">Save</a>
-                        <a href="addLearner.php" class="btn btn-danger">Discard</a><br/><br/>
+                        <h1 class="page-header">New Program
+                            <a style="margin-bottom:1%" href="addLearner.php" class="btn btn-primary">Save</a>
+                            <a style="margin-bottom:1%" href="addLearner.php" class="btn btn-danger">Discard</a></h1>
                     </div>
                     <div class="col-lg-12">
                         <div class="panel panel-default">
